@@ -1,7 +1,7 @@
 package com.heap;
 
 public class CheckMinHeapIterative {
-    private static boolean checkMinHeapRecursive(int[] arr, int index) {
+    private static boolean checkMinHeapIterative(int[] arr, int index) {
         if (arr[index] <= 1) {
             return true;
         }
@@ -17,7 +17,7 @@ public class CheckMinHeapIterative {
         int arr[] = {1, 2, 3, 4, 5, 6};
         int index = 0;
 
-        if (checkMinHeapRecursive(arr, index)) {
+        if (checkMinHeapIterative(arr, index)) {
             System.out.println("Given array is Min Heap");
         } else {
             System.out.println("Given Array is not Min Heap");
