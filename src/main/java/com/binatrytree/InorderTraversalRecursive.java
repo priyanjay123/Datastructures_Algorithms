@@ -1,10 +1,10 @@
 package com.binatrytree;
 
-class Node{
+class TreeNode{
     int data;
-    Node left, right;
+    TreeNode left, right;
 
-    public Node(int data) {
+    public TreeNode(int data) {
         this.data = data;
         this.left = this.right = null;
     }
@@ -13,7 +13,7 @@ class Node{
 // TC : O(n)
 // SC : O(n) for skewed tree
 public class InorderTraversalRecursive {
-    private static void inorder(Node root) {
+    private static void inorder(TreeNode root) {
         if(root == null)
             return;
         inorder(root.left);
@@ -22,11 +22,11 @@ public class InorderTraversalRecursive {
     }
 
     public static void main(String[] args) {
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
 
         inorder(root);
     }

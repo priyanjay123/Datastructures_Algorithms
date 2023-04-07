@@ -5,26 +5,26 @@ import java.util.Stack;
 public class PreorderTraversalIterative {
 
     public static void main(String[] args) {
-        Node root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
 
         preorderIterative(root);
     }
 
     // TC : O(n)
     // SC : O(n) for skewed tree
-    private static void preorderIterative(Node root) {
+    private static void preorderIterative(TreeNode root) {
         if (root == null)
             return;
 
-        Stack<Node> st = new Stack<>();
+        Stack<TreeNode> st = new Stack<>();
         st.push(root);
 
         while (!st.empty()) {
-            Node curr = st.pop();
+            TreeNode curr = st.pop();
             System.out.print(curr.data + " ");
 
             if (curr.right != null) {
